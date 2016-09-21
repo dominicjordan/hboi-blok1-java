@@ -9,6 +9,14 @@ public class Methodes {
     In de main methode kunnen weer andere methodes aangeroepen worden welke uitgevoerd moeten worden.
     */
     public static void main(String[] args) {
+        //zonderMethodes();
+        //metMethodes();
+        String a = "V";
+        String b = new Scanner(System.in).nextLine();
+        if(a == b) System.out.println("xxx");
+    }
+    
+    public static void zonderMethodes() {
         //Declareer variabelen (plaatsen in het geheugen)
         String naam1;
         String naam2;
@@ -36,10 +44,31 @@ public class Methodes {
         System.out.println("Welkom " + naam3 + "!");
     }
     
-    public static void printBericht() {
+    public static void metMethodes() {
+        String naam1;
+        String naam2;
+        String naam3;
         
+        naam1 = leesNaam();
+        naam2 = leesNaam();
+        naam3 = leesNaam();
+        
+        printBericht(naam1);
+        printBericht(naam2);
+        printBericht(naam3);
     }
     
+    public static String leesNaam() {
+        String naam;
+        Scanner lezer = new Scanner(System.in);
+        
+        System.out.println("Voer een naam in:");
+        naam = lezer.nextLine();
+        return naam;
+    }
     
+    public static void printBericht(String naam) {
+        System.out.println("Welkom " + naam + "!");
+    }
     
 }
