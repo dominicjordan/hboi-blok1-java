@@ -14,7 +14,7 @@ public class Opdracht2P6 {
     Ingelezen wordt: sportsoort (voetbal of handbal, aangegeven met een ‘V’ of een ‘H’), leeftijd en duur van lidmaatschap.  Getoond wordt de te betalen contributie.
      */
 
- /*
+     /*
     STAPPEN:
     
     lees sportsoort in (V of H)     String
@@ -48,11 +48,12 @@ public class Opdracht2P6 {
         duurLidmaatschap = lezer.nextInt();
 
         int contributie = 0;
+
         //als sportsoort is V dan contributie is 175 euro
         //als sportsoort is H dan contributie is 225 euro
-        if ("V".equals(sportSoort)) {
+        if (sportSoort.equals("V")) {
             contributie = 175;
-        } else if ("H".equals(sportSoort)) {
+        } else if (sportSoort.equals("H")) {
             contributie = 225;
         }
 
